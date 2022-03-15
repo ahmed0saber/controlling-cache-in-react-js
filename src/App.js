@@ -12,12 +12,19 @@ function App() {
     .then(response => response.json())
     .then(data => {
       if(version != data.version){
-        console.log("Cache Cleared")
-        window.location.reload(true)
+        if(version != data.version){
+          caches.keys().then((names) => {
+            names.forEach((name) => {
+              caches.delete(name)
+            })
+          })
+          alert('Complete Cache Cleared')
+        }
+        window.location.reload(false)
       }
     })
   }
-  
+
   useEffect(() => {
     if(started){
       getData()
