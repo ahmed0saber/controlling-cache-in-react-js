@@ -8,8 +8,8 @@ main{
   display: grid;
   place-items: center;
   height: 100vh;
-  background-color: #080808;
-  color: #f7f7f7;
+  background-color: #f7f7f7;
+  color: #080808;
 }
 h1{
   padding: 10px;
