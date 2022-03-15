@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import './App.css';
 
 function App() {
-  const [version, setVersion] = useState(1);
+  const [version, setVersion] = useState(2);
   const [started, setStarted] = useState(true);
 
   const getData = () => {
